@@ -8,20 +8,24 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <div>
-      <header>
-        <h1>Test my Page</h1>
-      </header>
-      <main>
-        <a href="/#footnote">See footnote for more info...</a>
-      </main>
-      <footer>
-        <section">
-          <span id="footnote" class="footnote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur libero 
-            praesentium porro eligendi, quis nisi quos tenetur accusamus veritatis.</span>
+    <main>
+      <article>
+        <section>
+          <p>
+            Lorem ipsum dolor<sup class="footnote" id="footnote-top-1">
+              <a href="#footnote-bottom-1">1</a> quis nisi quos tenetur accusamus veritatis.
+            </sup>
+          </p>
+          <footer id="footnote" class="footnote">
+            <ol>
+              <li id="footnote-bottom-1">Consequuntur libero praesentium porro eligendi.
+                <a href="#footnote-top-1"><span class="screen-reader-text">Back to reference</span></a>
+              </li>
+            </ol>
+          </footer>
         </section>
-      </footer>
-    </div>
+      </article>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
