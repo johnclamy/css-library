@@ -18,7 +18,48 @@ html {
 }
 
 p {
-  margin: 0
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 1rem;
+}
+
+.main-article {
+  padding: .5rem 1rem;
+  opacity: 0.5;
+  background-color: lightblue;
+  transform: translateX(-100px) scale(1.2) rotate(1deg);
+}
+
+.moving-arrow {
+  width: 200px;
+  height: 200px;
+  background: red;
+  border: 3px solid brown;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25%  0%);
+  transition: clip-path 0.2s;
+  clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.moving-arrow:hover {
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+svg:hover path {
+  d: path("M 10 0  L 10 0 L 13 7 L 20 10   L 20 10   L 13 13   L 10 20   L 10 20   L 7 13   L 0 10   L 0 10   L 7 7   L 10 0 ");
+}
+path {
+transition: 0.2s;
+}
+
+.footnote {
+  font-style: italic;
+  color: lightgrey;
+  font-size: small;
 }
 
 li:target#footnote-bottom-1 {

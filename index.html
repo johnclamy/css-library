@@ -8,24 +8,59 @@
   </head>
   <body>
     <!-- <div id="app"></div> -->
-    <main>
-      <article>
-        <section>
-          <p>
-            Lorem ipsum dolor<sup class="footnote" id="footnote-top-1">
-              <a href="#footnote-bottom-1">1</a> tenetur accusamus veritatis.
-            </sup>
-          </p>
-          <footer id="footnotes" class="footnotes">
-            <ol>
-              <li id="footnote-bottom-1">Consequuntur libero praesentium porro eligendi quis nisi quos.
-                <a href="#footnote-top-1"><span class="screen-reader-text">Back to article</span></a>
-              </li>
-            </ol>
-          </footer>
-        </section>
-      </article>
-    </main>
+    <div class="grid">
+      <header>Navbar section</header>   
+      <main>
+        <article>
+          <section>
+            <header>
+              <h1>
+                Lorem ipsum dolor<sup class="footnote" id="footnote-top-1">
+                  <a href="#footnote-bottom-1">1</a> tenetur accusamus veritatis.
+                </sup>
+              </h1>
+            </header>
+            <section class="main-article">
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione sunt, inventore non 
+                aliquam aut eveniet perferendis maxime accusantium sit! Earum tenetur odit corporis 
+                cumque autem eius aliquam nesciunt saepe quia?</p>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione sunt, inventore non 
+                aliquam aut eveniet perferendis maxime accusantium sit! Earum tenetur odit corporis 
+                cumque autem eius aliquam nesciunt saepe quia?</p>
+            </section>
+            <section class="moving-arrow"></section>
+            <section style="max-width: 25rem; margin: 1.5rem 0;">
+              <svg viewBox="0 0 20 20">
+                <path d="
+                  M 8 0
+                  L 12 0
+                  L 12 8
+                  L 20 8
+                  L 20 12
+                  L 12 12
+                  L 12 20
+                  L 8 20
+                  L 8 12
+                  L 0 12
+                  L 0 8
+                  L 8 8
+                  L 8 0
+                  "></path>
+              </svg>
+            </section>
+            
+            <footer id="footnotes" class="footnotes">
+              <ol>
+                <li id="footnote-bottom-1">Consequuntur libero praesentium porro eligendi quis nisi quos.
+                  <a href="#footnote-top-1"><span class="screen-reader-text">Back to article</span></a>
+                </li>
+              </ol>
+            </footer>
+          </section>
+        </article>
+      </main>
+      <aside>sidebar section of the website</aside>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
