@@ -21,10 +21,19 @@ p {
   margin: 0
 }
 
-li:target {
+li:target#footnote-bottom-1 {
   display:inline;
   background: rgba(220, 220, 18, 0.294);
   border-radius: .5rem;
   padding: .5rem .75rem;
   margin: 1rem;
+}
+
+.footnotes :target {
+  animation: shout 2s;
+}
+
+@keyframes shout {
+  from { background: lightpink; }
+  to { background: lightsalmon; }
 }
