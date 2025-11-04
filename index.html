@@ -15,12 +15,20 @@
         <span class="logo__title">RWD</span>
         <span class="logo__subtitle">Education</span>
       </a>
-      <nav>
-        <a href="/about.html">about</a>
-        <a href="/reviews.html">reviews</a>
-        <a href="/chapter-list.html">chapter list</a>
-        <a href="/buy.html">buy</a>
-        <a href="/code.html">code</a>
+      <nav class="navlink">
+        <a class="navlink__item" href="/about.html">about</a>
+        <a class="navlink__item" href="/reviews.html">reviews</a>
+        <a class="navlink__item" href="/chapter-list.html">chapter list</a>
+        <a class="navlink__item" href="/buy.html">buy</a>
+        <!-- pop-up btn to choose code from the second or third edition of the book -->
+        <button class="navlink__item" type="button">code</button>
+        <div class="navlink__download-panel">
+          <p class="navlink__download-panel__title">Download Code</p>
+          <div class="navlink__download-panel__links">
+            <a href="RWD2e_download.zip" class="navlink__download-panel__links__item">2nd Edition</a>
+            <a href="RWD3e_download.zip" class="navlink__download-panel__links__item">3rd Edition</a>
+          </div>
+        </div>
       </nav>
     </header>
     <!-- start hero section -->
