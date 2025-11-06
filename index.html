@@ -138,22 +138,27 @@
         </ul>
         <div class="product__look-in">
             <img
-              class="product__look-in__image src="/ResponsiveWebDesignA.png"
+              class="product__look-in__image" src="/ResponsiveWebDesignA.png"
               alt="Inside the Responsive Web Design with HTML5 and CSS book">
         </div>
       </section> <!-- end of product content review -->
       <!-- mailing list section -->
-      <section class="mailing-list">
-        <header>
-          <h2><img src="/#" alt="product icon">mailing list</h2>
-        </header>
-        <p>Want to know about any special offers from the author, Ben Frain? Subscribe here and you'll 
-          be the first to know with his infrequent newsletter!</p>
-        <input type="text" placeholder="subscribe">
+      <section id="mailing-list" class="mailing-list">
+        <h2 class="mailing-list__title">mailing list</h2>
+        <div class="mailing-list__wrapper">
+          <label for="mailing-list" class="mailing-list__label">
+            Want to know when the book hits the shelves? Or perhaps advance notice 
+            of special offers? Subscribe here and you'll be first to know!
+          </label>
+          <form class="mailing-list__form" action="/handle-form" method="post">
+            <input id="mailing-list" class="mailing-list__form__input" />
+            <button type="submit" class="mailing-list__form__btn">Subscribe</button>
+          </form>
+        </div>
       </section> <!-- end mailing list section -->
 
       <!-- chapter list section -->
-      <section class="chapters">
+      <section id="chapters" class="chapters">
         <header>
           <h2><img src="/#" alt="product icon">full chapter list</h2>
         </header>
