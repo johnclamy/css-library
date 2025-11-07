@@ -1,113 +1,79 @@
-* {
+@font-face {
+  font-family: "Inter var experimental";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  src: url("Inter.var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("Inter-Regular.woff2") format("woff2"), url("Inter-Regular.woff") format("woff");
+}
+
+html {
   box-sizing: border-box;
+  /* Nicer looking fonts for OS X and iOS */
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  /* We will be adding our own margin to these elements as needed. */
   margin: 0;
-  padding: 0;
-}
-
-body {
-	padding: 1rem 0.5rem;
-	font-size: 1.3rem;
-	line-height: 1.2;
-	max-width: 60rem;
-	margin: 0 auto;
-	color: #333;
-}
-
-img {
-  max-width: 100%;
-}
-
-.site-header {
-  text-align: center;
-  margin-bottom: 2rem;
-  border-bottom: 8px double #f9f9f9;
-  padding-bottom: 1rem;
-}
-
-.site-header__subheader {
+  /* You'll want to set font-size as needed. */
   font-size: 1rem;
+  /* No bold for h tags unless you want it */
+  font-weight: 400;
 }
 
-.logo-wrapper {
+svg {
   display: block;
 }
 
-.intro__figure {
-  position: relative;
+img {
+  /*Make images behave responsively. Here they will scale up to 100% of their natural size*/
+  max-width: 100%;
+  /*Make images display as a block (UA default is usually inline)*/
+  display: block;
 }
 
-.intro {
-  font-size: 1.8rem;
-	font-style: italic;
+/*Set a default non-variable font but then enhance if the browser supports a variable font*/
+body {
+  font-family: Inter, sans-serif;
+  border-top: 5px solid #b50404;
+  border-bottom: 5px solid #b50404;
+  background-image: url("triangle_bg.png");
 }
 
-.intro__figure__img {
-	border: 6px solid #e8cfa9;
-	border-radius: 4px;
-}
-
-.intro__figure__caption {
-	font-size: 0.75rem;
-	position: absolute;
-	bottom: 0.5rem;
-	right: 1rem;
-	padding: 3px;
-	background-color: #222;
-	color: #e4e4e4;
-}
-
-.recipe-detail-list li {
-  padding: 0.4rem 0;
-}
-
-.recipe-detail-list li:after {
-	content: "✼";
-	display: block;
-	text-align: center;
-	margin: 1rem 0 0.5rem 0;
-	color: #eee;
-}
-
-/* Media queries */
-@media (min-width: 768px) {
+@supports (font-variation-settings: "wdth" 115) {
   body {
-		border-left: 4px solid #f9f9f9;
-		border-right: 4px solid #f9f9f9;
-		padding: 1rem 2rem;
-	}
-
-	.intro-wrapper {
-		display: table;
-		table-layout: fixed;
-		width: 100%;
-	}
-
-	.intro__figure,
-	.intro {
-		display: table-cell;
-		width: 50%;
-		vertical-align: middle;
-		text-align: center;
-	}
-
-	.intro {
-		padding: 0.5rem;
-		font-size: 2.5rem;
-		text-align: left;
-		position: relative;
-	}
-
-	.recipe-ingredients {
-		font-size: 0.9rem;
-		float: right;
-		padding: 1rem;
-		margin: 0 0 0.5rem 1rem;
-		border-radius: 3px;
-		background-color: #ffffdf;
-		border: 2px solid #e8cfa9;
-	}
-
-  .recipe-ingredients h2 {
-    margin: 0;
+    font-family: "Inter var experimental";
   }
 }
+
+.master-head {
+  display: flex;
+  flex-direction: column;
+}
+
