@@ -219,7 +219,8 @@ body {
   margin: 40px 0 0;
 }
 
-.about__card__title {
+.about__card__title,
+.about__card-info__title {
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   text-transform: uppercase;
