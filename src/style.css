@@ -372,5 +372,18 @@ body {
   flex: 1 0 auto;
 }
 
+.mailing-list__form__btn {
+  outline: 0;
+  color: #b50404;
+  font-family: "Oswald", sans-serif;
+  font-size: 12px;
+  display: flex;
+  height: 100%;
+  border: 0;
+  align-items: center;
+  background-color: transparent;
+  text-transform: uppercase;
+}
+
 
 /* book chapters section  */
