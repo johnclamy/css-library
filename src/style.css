@@ -58,6 +58,11 @@ img {
   display: block;
 }
 
+blockquote {
+  font-size: 20px;
+  margin: 0;
+}
+
 /*Set a default non-variable font but then enhance if the browser supports a variable font*/
 body {
   font-family: Inter, sans-serif;
@@ -278,3 +283,55 @@ body {
     color: #fff;
     margin: 10px;
 }
+
+
+/* reviews section  */
+
+.reviews {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  background-color: #222;
+  clip-path: polygon(0 0%, 100% 6%, 100% 94%, 0 100%);
+}
+
+.reviews__title {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+}
+
+.review__quote {
+  color: #fff;
+  font-family: "Noto Serif", serif;
+  padding: 10px 20px;
+}
+
+
+/* product section  */
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.product__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.product__info {
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 10px;
+}
+
+.product__bullet {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+
