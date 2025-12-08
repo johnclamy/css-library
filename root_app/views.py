@@ -13,4 +13,11 @@ def home_page(request):
 
 
 def about_page(request):
-    return render(request, 'root_app/about.html')
+    template_data = {}
+    template_data['page_title'] = 'Find out more about Riverside Pet Store | About Page'
+
+    return render(
+        request,
+        'root_app/about.html',
+        { 'template_data': template_data }
+    )
