@@ -7,6 +7,7 @@
     --off-white: #fefefe;
     --white: #ffffff;
     --blue: #007bff;
+    --light-blue: #33bbe5;
     --red: #dc3545;
     --green: #28a745;
     --yellow: #ffc107;
@@ -19,10 +20,16 @@
     --inverse-color: #DAE3E5;
     --font-family: 'Poppins', Arial, Helvetica, sans-serif;
     --font-size-base: 16px;
+    --font-size-xl: 1.75rem;
     --font-size-lg: 1.25rem;
     --font-size-sm: 0.875rem;
     --spacing-base: 1rem;
 }
+
+
+/*********************************************************
+ * 01 Base styles
+ *******************************************************/
 
 * {
     box-sizing: border-box;
@@ -33,6 +40,7 @@
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
+    font-weight: 400;
     color: var(--dark-gray);
     background-color: var(--off-white);
     margin: 0;
@@ -43,3 +51,120 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+a,
+a:link {
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-style: italic;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:visited {
+    color:var(--light-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+ul,
+li {
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*********************************************************
+ * 02 Base layout styles
+ *******************************************************/
+
+.base-container {
+    display: grid;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+
+/*********************************************************
+ * 03 Navigation section styles
+ *******************************************************/
+
+.base-nav {
+    background-color: var(--gray-light);
+    border-top: calc(var(--spacing-base) * .85) solid var(--secondary-color);
+    padding: calc(var(--spacing-base) * .65) calc(var(--spacing-base) * .85) 0;
+}
+
+ul.base-nav__list {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.base-nav__logo a,
+.base-nav__item a {
+    font-style: normal;
+    color: var(--primary-color);
+    text-decoration: none;   
+}
+
+.base-nav__logo a span {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.base-nav__item a {
+    font-size: var(--font-size-sm);
+}
+
+.base-nav__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.base-nav__list li a {
+    display: block;
+    padding: calc(var(--spacing-base) * .94) calc(var(--spacing-base) * .35);
+}
+
+.base-nav__button {
+    order: 2;
+}
+
+.base-nav__button a {
+    color: var(--secondary-color);
+    border-radius: 4px;
+    font-size: var(--font-size-sm);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.base-nav__toggle {
+    order: -1;
+    font-size: calc(var(--font-size-base) * 1.25);
+}
+
+.base-nav__toggle i {
+    color: var(--primary-color);
+}
+
+.base-nav__item {
+    order: 3;
+    width: 100%;
+    display: none;
+    text-align: center;
+}
+
+.active .base-nav__item {
+    display: block;
+}
+
