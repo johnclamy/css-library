@@ -5,18 +5,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    {% comment %} <script src="https://kit.fontawesome.com/f16e47194e.js" crossorigin="anonymous"></script> {% endcomment %}
+    <script src="https://kit.fontawesome.com/f16e47194e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{{ template_data.page_title }}</title>
 </head>
 <body>
     <div class="base-container">
-        <header class="base-header">Header section</header>
+        <!-- Navigation section -->
+        <nav class="base-nav">
+            <ul class="base-nav__list">
+                <li class="base-nav__logo"><a href="#">River<span>side</span> Pet Store</a></li>
+                <li class="base-nav__item"><a href="#">home</a></li>
+                <li class="base-nav__item"><a href="#">about</a></li>
+                <li class="base-nav__item"><a href="#">pets</a></li>
+                <li class="base-nav__item"><a href="#">cart</a></li>
+                <li class="base-nav__item"><a href="#">contact</a></li>
+                <li class="base-nav__button"><a href="#">login</a></li>
+                <li class="base-nav__button"><a href="#">sign up</a></li>
+                <li class="base-nav__toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            </ul>
+        </nav>
+        <!-- END Navigation section -->
         <main class="content-area">
             {% block content %}
             {% endblock content %}
         </main>
         <footer class="base-footer">The footer area</footer>
     </div>
+    <script>
+        const navToggle = document.querySelector('.base-nav__toggle');
+        const navList = document.querySelector('.base-nav__list');
+
+        navToggle.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            if (navList.classList.contains('active')) {
+                navList.classList.remove('active');
+                // add hamburger icon
+                navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            } else {
+                navList.classList.add('active');
+                // add close (x) icon
+                navToggle.innerHTML = '<i class="fas fa-times"></i>';
+            }
+        });
+    </script>
 </body>
 </html>
