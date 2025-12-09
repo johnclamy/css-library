@@ -108,6 +108,14 @@ ul.base-nav__list {
     text-transform: capitalize;
 }
 
+.base-nav__logo {
+    padding: 7.5px 10px 7.5px 0;
+}
+
+.base-nav__item {
+    padding: 10px;
+}
+
 .base-nav__logo a,
 .base-nav__item a {
     font-style: normal;
@@ -124,6 +132,15 @@ ul.base-nav__list {
     font-size: var(--font-size-sm);
 }
 
+.base-nav__item.base-nav__btn {
+    padding: 9px 5px;
+}
+
+.base-nav__item:not(.base-nav__btn) a:hover,
+.base-nav__item a:hover::after {
+    color: var(--secondary-color);
+}
+
 .base-nav__list {
     display: flex;
     flex-wrap: wrap;
@@ -136,11 +153,7 @@ ul.base-nav__list {
     padding: calc(var(--spacing-base) * .94) calc(var(--spacing-base) * .35);
 }
 
-.base-nav__button {
-    order: 2;
-}
-
-.base-nav__button a {
+.base-nav__item.base-nav__btn a {
     color: var(--secondary-color);
     border-radius: 4px;
     font-size: var(--font-size-sm);
@@ -149,8 +162,12 @@ ul.base-nav__list {
 }
 
 .base-nav__toggle {
-    order: -1;
+    order: 1;
     font-size: calc(var(--font-size-base) * 1.25);
+}
+
+.base-nav__item.base-nav__btn {
+    order: 2;
 }
 
 .base-nav__toggle i {
@@ -168,3 +185,6 @@ ul.base-nav__list {
     display: block;
 }
 
+.base-nav__btn.base-nav__hr {
+    border-bottom: 2px solid var(--light-color);
+}
