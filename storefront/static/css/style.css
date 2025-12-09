@@ -164,6 +164,7 @@ ul.base-nav__list {
 .base-nav__toggle {
     order: 1;
     font-size: calc(var(--font-size-base) * 1.25);
+    cursor: pointer;
 }
 
 .base-nav__item.base-nav__btn {
