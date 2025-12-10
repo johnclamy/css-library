@@ -37,6 +37,12 @@
     padding: 0;
 }
 
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: var(--font-family);
     font-size: var(--font-size-base);
@@ -88,6 +94,8 @@ li {
 
 .base-container {
     display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -269,4 +277,17 @@ ul.base-nav__list {
     .base-nav__toggle {
         display: none;
     }
+}
+
+
+/*********************************************************
+ * 04 Footer styles
+ *******************************************************/
+
+.base-footer {
+    background-color: var(--primary-color);
+    color: var(--off-white);
+    padding: calc(var(--spacing-base) * 1.5) calc(var(--spacing-base) * .85);
+    text-align: center;
+    font-size: var(--font-size-sm);
 }
