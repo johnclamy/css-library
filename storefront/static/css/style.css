@@ -186,6 +186,58 @@ ul.base-nav__list {
     display: block;
 }
 
-.base-nav__btn.base-nav__hr {
+.base-nav__btn.base-nav__btn2 {
     border-bottom: 2px solid var(--light-color);
+}
+
+/* Tablet menu */
+
+@media (min-width: 43.75rem) {
+    .base-nav__list {
+        justify-content: center;
+    }
+
+    .base-nav__logo {
+        flex: 1;
+    }
+
+    .base-nav__item.base-nav__btn {
+        width: auto;
+        order: 1;
+        display: block;
+    }
+
+    .base-nav__toggle {
+        flex: 1;
+        text-align: right;
+        order: 2;
+    }
+
+    .base-nav__list li.base-nav__btn a {
+        padding: 10px 15px;
+        margin: 5px 0;
+    }
+
+    .base-nav__btn a {
+        background-color: var(--light-color);
+        border: 1px solid var(--secondary-color);
+    }
+
+    .base-nav__btn.base-nav__btn2 {
+        border: 0;
+    }
+
+    .base-nav__btn.base-nav__btn2 a {
+        background: transparent;
+        border: 1px solid var(--secondary-color);
+    }
+
+    .base-nav__btn a:hover {
+        text-decoration: none;
+    }
+
+    .base-nav__btn:not(.base-nav__btn2) a:hover {
+        background-color: var(--secondary-color);
+        color: var(--off-white);
+    }
 }
