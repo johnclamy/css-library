@@ -241,3 +241,32 @@ ul.base-nav__list {
         color: var(--off-white);
     }
 }
+
+/* Desktop menu */
+
+@media (min-width: 60rem) {
+    .base-nav__list {
+        align-items: flex-start;
+        flex-wrap: nowrap;
+        background: none;
+    }
+
+    .base-nav__logo {
+        order: 0;
+    }
+
+    .base-nav__item {
+        order: 1;
+        position: relative;
+        display: block;
+        width: auto;
+    }
+
+    .base-nav__btn {
+        order: 2;
+    }
+
+    .base-nav__toggle {
+        display: none;
+    }
+}
