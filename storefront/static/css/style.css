@@ -22,6 +22,7 @@
     --font-size-base: 16px;
     --font-size-xl: 1.75rem;
     --font-size-lg: 1.25rem;
+    --font-size-md: 1rem;
     --font-size-sm: 0.875rem;
     --font-size-xs: 0.75rem;
     --spacing-base: 1rem;
@@ -46,7 +47,7 @@ body {
 
 body {
     font-family: var(--font-family);
-    font-size: var(--font-size-base);
+    font-size: var(--font-size-md);
     font-weight: 400;
     color: var(--dark-gray);
     background-color: var(--off-white);
@@ -346,4 +347,145 @@ ul.base-nav__list {
         margin: calc(var(--spacing-base) * .75) calc(var(--spacing-base) * 3) 0 0;
         text-align: center;
     }
+}
+
+/*********************************************************
+ * 05 Widgets styles
+ *******************************************************/
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--off-white);
+    border: none;
+    padding: calc(var(--spacing-base) * .75) calc(var(--spacing-base) * 2.5);
+    font-size: var(--font-size-md);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+.btn-primary-outline {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: calc(var(--spacing-base) * .75) calc(var(--spacing-base) * 2.5);
+    font-size: var(--font-size-md);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-primary-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--off-white);
+}
+
+.btn-primary:disabled,
+.btn-primary-outline:disabled {
+    background-color: var(--medium-gray);
+    color: var(--gray-light);
+    border-color: var(--medium-gray);
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+    color: var(--off-white);
+    border: none;
+    padding: calc(var(--spacing-base) * .75) calc(var(--spacing-base) * 2.5);
+    font-size: var(--font-size-md);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
+
+
+/*********************************************************
+ * 06 Main content styles
+ *******************************************************/
+
+ /* index.html page */
+ /* hero section */
+
+ .hero {
+    width: 100%;
+    height: 750px;
+    background: url('/static/img/hero-overlay-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+ }
+
+ .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 83, 210, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: var(--off-white);
+    padding: calc(var(--spacing-base) * 4) calc(var(--spacing-base) * 2);
+ }
+
+ .hero-header {
+    line-height: 1.3;
+    margin-bottom: calc(var(--spacing-base) * 2.5);
+ }
+
+ .hero-header__title {
+    font-size: var(--font-size-xl);
+    font-weight: 700;    
+ }
+
+ .hero-header__title b {
+    color: var(--primary-color);
+ }
+
+.hero-header__title span {
+    color: rgb(4, 4, 117);
+}
+
+.hero-info {
+    max-width: 600px;
+    font-size: var(--font-size-md);
+}
+
+.hero-action {
+    margin: calc(var(--spacing-base) * 2.5) 0;
+    display: flex;
+    gap: calc(var(--spacing-base) * 1);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    border: 10px solid var(--primary-color);
+    margin: 10px;
+}
+
+.hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
 }
