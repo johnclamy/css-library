@@ -489,3 +489,26 @@ ul.base-nav__list {
     object-fit: cover;
     
 }
+
+/* Footer layout for medium screens */
+@media (min-width: 43.75rem) {
+    .hero-header__title {
+        font-size: calc(var(--font-size-xl) * 1.1);
+    }
+    .hero-header__title {
+        font-size: calc(var(--font-size-xl) * 1.25);
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc(var(--spacing-base) * 1.2);
+        margin: calc(var(--spacing-base) * 4) 0;
+    }
+
+    .hero-content__wrapper {
+        max-width: 55%;
+    }
+}
