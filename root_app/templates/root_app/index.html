@@ -1,23 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
-<section class="hero">
-    <div class="hero-overlay">
+<article class="hero">
+    <div class="hero-overlay">        
         <header class="hero-header">
             <h1 class="hero-header__title">Welcome to <br><b>River<span>side</span> Pet Store</b></h1>
         </header>
-        <p class="hero-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            Tenetur consequuntur ad voluptas fugiat. Laborum nemo provident eius! Error eligendi 
-            illo quam repudiandae reprehenderit ea aliquid beatae amet! Ipsam, ratione sed!
-        </p>
-        <div class="hero-action">
-            <button type="button" class="btn-primary">Buy now</button>
-            <button type="button" class="btn-secondary">Contact</button>
-        </div>
-        <figure class="hero-img">
-            <img src="{% static 'img/hero-img.jpg' %}" alt="head photo of a big white fluffy dog">
-        </figure>
-        <div class="hero-slider"></div>
+        <section class="hero-content">
+            <div class="hero-content__wrapper">
+                <p class="hero-info">Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                    Tenetur consequuntur ad voluptas fugiat. Laborum nemo provident eius! Error eligendi 
+                    illo quam repudiandae reprehenderit ea aliquid beatae amet! Ipsam, ratione sed!
+                </p>
+                <div class="hero-action">
+                    <button type="button" class="btn-primary">Buy now</button>
+                    <button type="button" class="btn-secondary">Contact</button>
+                </div>
+            </div>
+            <figure class="hero-img">
+                <img src="{% static 'img/hero-img.jpg' %}" alt="head photo of a big white fluffy dog">
+            </figure>
+        </section>
+        <footer class="hero-footer-slider"></footer>
     </div>
-</section>
+</article>
 {% endblock content %}
