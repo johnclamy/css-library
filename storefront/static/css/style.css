@@ -512,3 +512,43 @@ ul.base-nav__list {
         max-width: 55%;
     }
 }
+
+
+ /* about.html page */
+
+ .about-header h1 {
+    font-size: var(--font-size-xl);
+    max-width: 960px;
+    margin: 40px auto;
+    padding-left: 10px;
+    border-bottom: 1px solid var(--light-color);
+ }
+
+ .about-article-container {
+    max-width: 960px;
+    margin: 0 auto 60px;
+    padding: 0 10px;
+ }
+
+.about-primary-article,
+.about-secondary-article {
+    margin-bottom: calc(var(--spacing-base) * 2);
+}
+
+.about-primary-article h2 {
+    font-size: var(--font-size-xl);
+    margin-bottom: calc(var(--spacing-base) * 1);
+    color: var(--secondary-color);
+}
+
+.about-primary-article p {
+    font-size: var(--font-size-lg);
+    line-height: 1.6;
+    color: var(--dark-gray);
+}
+
+.about-secondary-article h2 {
+    font-size: var(--font-size-lg);
+    margin-bottom: calc(var(--spacing-base) * 1);
+
+}
